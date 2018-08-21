@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body{
+        width: 600px;
+      }
+      .wrapper{
+        margin: 40px !important;
+      }
+      button{
+        margin: 0 auto !important;
+        display: block !important;
+      }
+      h3{
+        margin-bottom: 38px !important;
+      }
+      .hidden{
+        display: none;
+      }
+      .switcher{
+        color: blue;
+        cursor: pointer;
+        width: 96%;
+      }
+      .error{
+        color: red;
+        font-size: 20px;
+        top: 20px;
+        position: relative;
+      }
+      .info{
+        color: green;
+        font-size: 20px;
+        top: 20px;
+        position: relative;
+      }
+      .progress{
+        top: 20px;
+      }
+      table{
+        font-size: 15px;
+      }
+.page{
+  position: relative;
+    z-index: 200;
+}
+.home{
+  margin-top: 10px;
+    float: right;
+}
+    </style>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+</head>
+
+<body>
+
+
+    <div class="row wrapper">
+        <h3 class="center-align">Password Manager</h3>
+        <div class="login-wrapper page">
+            <h5 class="center-align">Login</h5>
+            <form class="col s12 login">
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input name="username" id="logusername" type="text">
+                        <label for="logusername">Username</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input name="password" id="logpassword" type="password">
+                        <label for="logpassword">Password</label>
+                    </div>
+                </div>
+                <button class="btn waves-effect waves-light" type="submit">Submit
+                </button>
+            </form>
+        </div>
+        <div class="register-wrapper page">
+            <h5 class="center-align">Register</h5>
+            <form class="col s12 register">
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input name="username" id="regusername" type="text">
+                        <label for="regusername">Username</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input name="password" id="regpassword" type="password">
+                        <label for="regpassword">Password</label>
+                    </div>
+                </div>
+                <button class="btn waves-effect waves-light" type="submit">Submit
+                </button>
+
+
+            </form>
+        </div>
+        <p class="error center-align"></p>
+
+
+        <div class="content-wrapper page">
+            <p style="font-size: 15px;" class="user-name"></p>
+            <div class="collection">
+                <a class="collection-item" id="detect">
+                    <h5>Add Form</h5>
+                </a>
+                <a class="collection-item" id="vault">
+                    <h5>Your Vault</h5>
+                </a>
+            </div>
+
+            <button class="logout btn waves-effect waves-light">Logout</button>
+            <div class="authDetected">
+
+            </div>
+        </div>
+
+        <div class="vault-wrapper page">
+
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Url</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody class="vault-list">
+
+                </tbody>
+            </table>
+
+            <a class="waves-effect waves-light btn home">Back</a>
+        </div>
+
+        <div class="form-wrapper page">
+            <div class="form-content">
+                <h6 class="url"></h6>
+                <form class="col s12 new">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input name="newUser" id="newusername" type="text">
+                            <label for="newusername">New Username</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input name="newPass" id="newpassword" type="password">
+                            <label for="newpassword">New Password</label>
+                        </div>
+                    </div>
+                    <button class="btn waves-effect waves-light" type="submit">Submit
+                    </button>
+                </form>
+
+            </div>
+
+            <p class="info center-align"></p>
+
+            <a class="waves-effect waves-light btn home">Back</a>
+        </div>
+
+    </div>
+
+    <div class="extra">
+        <p class="right-align reg-text switcher">Create an Account</p>
+        <p class="right-align log-text hidden switcher">Login</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <script src="popup.js"></script>
+</body>
+
+</html>
